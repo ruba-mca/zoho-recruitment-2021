@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include<string.h>
+int main()
+{
+    char s[100],a[100];
+    scanf("%s",s);
+    int l,mid,k=0;
+    l=strlen(s);
+    mid=l/2;
+    for(int i=mid;i<strlen(s);i++)
+    a[k++]=s[i];
+    for(int i=0;i<strlen(s);i++)
+    a[k++]=s[i];
+    for(int i=0;i<strlen(s);i++){
+        k=0;
+        for(int j=0;j<strlen(s);j++){
+            if(j<l-1)
+            printf(" ");
+            if(j>=l-1)
+            printf("%c",a[k++]);
+        }
+        l--;
+        printf("\n");
+    }
+    return 0;
+
+}
